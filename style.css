@@ -30,7 +30,6 @@ h1 {
     font-size: calc(26px + (14 + 14 * 0.7) * ((100vw - 320px) / 1200));
     margin: auto;
     color: rgb(68, 51, 167);
-
 }
 
 h2 {
@@ -72,6 +71,8 @@ h3 {
 .projects {
     display: flex;
     gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .project-link {
@@ -116,6 +117,11 @@ li{
 .empty {
     background: none;
 }
+
+.project-image {
+    width: calc(270px + (15 + 15 * 0.7) * ((100vw - 320px) / 1200));
+    height: calc(135px + (15 + 15 * 0.7) * ((100vw - 320px) / 1200));
+}
 footer {
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(190,185,255,1) 100%);
@@ -141,17 +147,13 @@ footer {
     font-size: calc(13px + 6 * (100vw / 1200));;
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1140px) {
     .content {
         max-width: 1000px;
     }
-}
+} */
 
-@media (max-width: 760px) {
-    .projects {
-        display: block;
-    }
-    /* .code {
-       
-    } */
+
+@media (max-width: 340px) {
+    
 }
