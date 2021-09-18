@@ -10,139 +10,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/styles/default.min.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="burger.css">
     <style>
-        body {
-            margin: 0px;
-            font-family: Roboto, sans-serif;
-            font-weight: 300;
-            color: #080808;
-            
-        }
-        .content {
-            margin: auto;
-            margin-top: 6px;
-            padding: 10px;
-            max-width: 850px;
-            box-shadow: 0 0 7px #666;
-        }
-        main {
-            padding: 0 9px;
-            
-        }
-        header {
-            display:flex;
-            justify-content: space-between;
-            align-items:center;
-            flex-wrap: wrap;
-            padding: 30px 0px 40px 0px;
-            background: rgb(255,255,255);
-            background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(190,185,255,1) 100%);
-        }       
-        h1 {
-            text-transform: uppercase;
-            font-size: 2.5em;
-            margin: auto;
-            color: rgb(68, 51, 167);
-        }
-
-        h2 {
-            margin: 30px 0 0 0;
-        }
-
-        .cv-h2 {
-            position: relative;
-            padding-left: 40px;
-        }
-        .cv-h2 img {
-            position: absolute;
-            left: 0;
-            width: 33px;
-        }
-        .beginner {
-            color: rgb(68, 51, 167);
-        }
-        .myphoto {
-            width: 250px;
-            margin: auto;
-            border-radius: 5%;
-        } 
-        .info {
-            margin: auto;
-        }
-        .contacts{
-            font-size: 24px;
-            list-style: none;
-            padding: 0;
-        }
-        .line {
-            background-color: #000;
-            height: 1px;
-        }
-        a {
-            text-decoration: none;
-            color: black;
-        }
-        ul,
-        li{
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-        .item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
         
-        .stars {
-            display: flex;
-            margin-left: 50px;
-        }
-        
-        .css {
-            margin-left: 63px;
-        }
-        .js {
-            margin-left: 74px;
-        }
-        .scss {
-            margin-left: 54px;
-        }
-
-        .git {
-            margin-left: 14px;
-        }
-        .star {
-            width: 10px;
-            height: 10px;
-            margin-left: 4px;
-            border: 1px solid black;
-            border-radius: 50%;
-            background-color: black;
-        }
-        .empty {
-            background: none;
-        }
-        footer {
-            background: rgb(255,255,255);
-            background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(190,185,255,1) 100%);
-        }
-        .container-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin: 10px 100px 0;
-            padding-top: 23px;
-        padding-bottom: 16px;
-        }
-        .year {
-            font-family: sans-serif;
-            font-weight: 900;
-            color: #080808;
-        }
-    .code {
-            background: none;
-        }
     </style>
 </head>
 <body>
@@ -165,11 +36,26 @@
                             github: Mikhail1990-BY
                         </li>
                     </ul> 
-                </nav>  
+                </nav>
+                <div class="header__menu menu">
+                    <div class="menu__icon">
+                        <span></span>
+                    </div>
+                    <nav class="menu__body">
+                        <ul class="menu__list">
+                            <li><a data-goto=".summary" href="#" class="menu__link">Summary</a></li>
+                            <li><a data-goto=".skills" href="#" class="menu__link">Skills</a></li>
+                            <li><a data-goto=".code" href="#" class="menu__link">Code examples</a></li>
+                            <li><a data-goto=".exp" href="#" class="menu__link">Experience</a></li>
+                            <li><a data-goto=".education" href="#" class="menu__link">Education</a></li>
+                            <li><a data-goto=".eng" href="#" class="menu__link">English</a></li>
+                        </ul>
+                    </nav>
+                </div>  
             </div>
         </header>
         <main> 
-            <section>
+            <section class="summary">
                 <h2 class="cv-h2">
                     <img src="../rsschool-cv/img/pen.svg" alt="notes">
                     Summary
@@ -178,7 +64,7 @@
                 <p> I have no experience in Front-End Development, my work is all about engineering. And it’s very boring. That’s why I want to change my job and start to create.  
                     I’m ambitious and hardworking, so I believe I can become a good coder.</p>
         </section>
-        <section>
+        <section class="skills">
             <h2 class="cv-h2">
                 <img src="../rsschool-cv/img/skills.svg" alt="skills">
                 Skills
@@ -271,28 +157,45 @@
                 </nav>
             </div>  
         </section>
-        <section>
+        <section class="code">
             <h2 class="cv-h2">
                 <img src="../rsschool-cv/img/floppy-disk.svg" alt="disk">
                 Code examples
             </h2>
             <hr class="line">
-            <pre><code class="code">1. const absentVowel = string => [...'aeiou'].findIndex(letter => !string.includes(letter))</code></pre>
+            <pre><code class="code">1. const absentVowel = string => 
+        [...'aeiou'].findIndex(letter => !string.includes(letter))</code></pre>
             <pre><code class="code">2. function solve(s) {
             let r = /\d+/g;
             let array = s.match(r);
             return Math.max(...array);
     }</code></pre>
             <p style="font-weight:bold;">Projects</p>
-            <div style="display: flex; gap: 50px;">
-                <a target="blanc" href="http://rolling-scopes-school.github.io/mikhail1990-by-JSFEPRESCHOOL/custom-video-player/custom-video-player/player.html">
-                    <img src="../rsschool-cv/img/video.jpg" width="300" height="150" alt="video"></a>
+            <div class="projects">
+                <div class="project-link__one">
+                    <a target="blanc" href="http://rolling-scopes-school.github.io/mikhail1990-by-JSFEPRESCHOOL/custom-video-player/custom-video-player/player.html">
+                    <img src="../rsschool-cv/img/video.jpg" class="project-image" alt="video"></a>
+                    <h3>Custom HTML5 Video Player</h3>
+                    <p>Custom HTML5 Video Player - a video player that is executed in accordance with the 
+                        designer's intention and the appearance of which does not depend on the browser or device used.</p>
+                    <p>A custom video player can be added to the page of the application, game, website, and will give them uniqueness
+                        and originality, and arrange them in accordance with the idea of the author of the project. </p>
+                    <p>Used technologies: <b>HTML</b>, <b>CSS(flexbox)</b>, <b>clean JavaScript</b></p>
+                </div>
+                
                 <br>
-                <a target="blanc" href="http://rolling-scopes-school.github.io/mikhail1990-by-JSFEPRESCHOOL/vertical-slider/slider.html">
-                    <img src="../rsschool-cv/img/slider.jpg" width="300" height="150" alt="slider"></a>
+                <div class="project-link__two">
+                    <a target="blanc" href="http://rolling-scopes-school.github.io/mikhail1990-by-JSFEPRESCHOOL/vertical-slider/slider.html">
+                    <img src="../rsschool-cv/img/slider.jpg" class="project-image" alt="slider"></a>
+                    <h3>Vertical Slider</h3>
+                    <p>Vertical Slider - vertical slider on JavaScript</p>
+                    <p>Slider is a very popular and demanded element of various sites and web projects, which has many different variations. </p>
+                    <p>Used technologies: <b>HTML</b>, <b>CSS(flexbox)</b>, <b>clean JavaScript</b></p>
+                </div>
+                
             </div>
         </section>
-        <section>
+        <section class="exp">
             <h2 class="cv-h2">
                 <img src="../rsschool-cv/img/experience.svg" alt="exp">
                 Experience
@@ -302,7 +205,7 @@
                 <p>I am currently taking a course "JavaScript/Front-end Develoment"</p> 
             </div>
         </section>
-        <section>
+        <section class="education">
             <h2 class="cv-h2">
                 <img src="../rsschool-cv/img/mortarboard.svg" alt="education">
                 Education
@@ -315,13 +218,13 @@
                 <p>Complete html(basics), css(basics) and JavaScript(basics) courses on Hexlet.</p>
             </div>
         </section>
-        <section>
+        <section class="eng">
             <h2 class="cv-h2">
                 <img src="../rsschool-cv/img/eng.svg" alt="english">
                 English</h2>
             <hr class="line">
             <p><strong>B1. Intermediate</strong></p>
-            <p>Everyday practice on <a href="https://lingualeo.com/en">Lingualeo</a></p>
+            <p>Everyday practice on <a href="https://lingualeo.com/en" style="color: blue;" target="blank">Lingualeo</a></p>
             
         </section>
         </main> 
@@ -337,6 +240,7 @@
             </div>
         </footer>     
     </div>
+    <script src="burger.js"></script>
 </body>
 </html>
 
