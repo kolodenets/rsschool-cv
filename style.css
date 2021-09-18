@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0px;
     font-family: Roboto, sans-serif;
@@ -70,13 +74,17 @@ h3 {
 }
 .projects {
     display: flex;
-    gap: 50px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.project-link {
+.project-link__one,
+.project-link__two {
     max-width: 500px;
+}
+
+.project-link__two {
+    margin-left: 50px;
 }
 .line {
     background-color: #000;
@@ -154,6 +162,14 @@ footer {
 } */
 
 
-@media (max-width: 340px) {
-    
+@media (max-width: 1087px) {
+    .project-link__two {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 450px) {
+    .myphoto {
+        width: 200px;
+    }
 }

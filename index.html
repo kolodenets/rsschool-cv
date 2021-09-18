@@ -11,6 +11,7 @@
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="burger.css">
     <style>
         
     </style>
@@ -35,22 +36,37 @@
                             github: Mikhail1990-BY
                         </li>
                     </ul> 
-                </nav>  
+                </nav>
+                <div class="header__menu menu">
+                    <div class="menu__icon">
+                        <span></span>
+                    </div>
+                    <nav class="menu__body">
+                        <ul class="menu__list">
+                            <li><a data-goto=".summary" href="#" class="menu__link">Summary</a></li>
+                            <li><a data-goto=".skills" href="#" class="menu__link">Skills</a></li>
+                            <li><a data-goto=".code" href="#" class="menu__link">Code examples</a></li>
+                            <li><a data-goto=".exp" href="#" class="menu__link">Experience</a></li>
+                            <li><a data-goto=".education" href="#" class="menu__link">Education</a></li>
+                            <li><a data-goto=".eng" href="#" class="menu__link">English</a></li>
+                        </ul>
+                    </nav>
+                </div>  
             </div>
         </header>
         <main> 
-            <section>
+            <section class="summary">
                 <h2 class="cv-h2">
-                    <img src="/img/pen.svg" alt="notes">
+                    <img src="../rsschool-cv/img/pen.svg" alt="notes">
                     Summary
                 </h2>
                 <hr class="line">
                 <p> I have no experience in Front-End Development, my work is all about engineering. And it’s very boring. That’s why I want to change my job and start to create.  
                     I’m ambitious and hardworking, so I believe I can become a good coder.</p>
         </section>
-        <section>
+        <section class="skills">
             <h2 class="cv-h2">
-                <img src="/img/skills.svg" alt="skills">
+                <img src="../rsschool-cv/img/skills.svg" alt="skills">
                 Skills
             </h2>
             <hr class="line">
@@ -141,9 +157,9 @@
                 </nav>
             </div>  
         </section>
-        <section>
+        <section class="code">
             <h2 class="cv-h2">
-                <img src="/img/floppy-disk.svg" alt="disk">
+                <img src="../rsschool-cv/img/floppy-disk.svg" alt="disk">
                 Code examples
             </h2>
             <hr class="line">
@@ -156,32 +172,32 @@
     }</code></pre>
             <p style="font-weight:bold;">Projects</p>
             <div class="projects">
-                <div class="project-link">
+                <div class="project-link__one">
                     <a target="blanc" href="http://rolling-scopes-school.github.io/mikhail1990-by-JSFEPRESCHOOL/custom-video-player/custom-video-player/player.html">
-                    <img src="/img/video.jpg" class="project-image" alt="video"></a>
+                    <img src="../rsschool-cv/img/video.jpg" class="project-image" alt="video"></a>
                     <h3>Custom HTML5 Video Player</h3>
                     <p>Custom HTML5 Video Player - a video player that is executed in accordance with the 
                         designer's intention and the appearance of which does not depend on the browser or device used.</p>
                     <p>A custom video player can be added to the page of the application, game, website, and will give them uniqueness
                         and originality, and arrange them in accordance with the idea of the author of the project. </p>
-                    <p>Used technologies: <b>HTML</b>, <b>CSS</b>, <b>чистый JavaScript</b></p>
+                    <p>Used technologies: <b>HTML</b>, <b>CSS(flexbox)</b>, <b>clean JavaScript</b></p>
                 </div>
                 
                 <br>
-                <div class="project-link">
+                <div class="project-link__two">
                     <a target="blanc" href="http://rolling-scopes-school.github.io/mikhail1990-by-JSFEPRESCHOOL/vertical-slider/slider.html">
-                    <img src="/img/slider.jpg" class="project-image" alt="slider"></a>
+                    <img src="../rsschool-cv/img/slider.jpg" class="project-image" alt="slider"></a>
                     <h3>Vertical Slider</h3>
                     <p>Vertical Slider - vertical slider on JavaScript</p>
                     <p>Slider is a very popular and demanded element of various sites and web projects, which has many different variations. </p>
-                    <p>Used technologies: <b>HTML</b>, <b>CSS</b>, <b>чистый JavaScript</b></p>
+                    <p>Used technologies: <b>HTML</b>, <b>CSS(flexbox)</b>, <b>clean JavaScript</b></p>
                 </div>
                 
             </div>
         </section>
-        <section>
+        <section class="exp">
             <h2 class="cv-h2">
-                <img src="/img/experience.svg" alt="exp">
+                <img src="../rsschool-cv/img/experience.svg" alt="exp">
                 Experience
             </h2>
             <hr class="line">
@@ -189,9 +205,9 @@
                 <p>I am currently taking a course "JavaScript/Front-end Develoment"</p> 
             </div>
         </section>
-        <section>
+        <section class="education">
             <h2 class="cv-h2">
-                <img src="/img/mortarboard.svg" alt="education">
+                <img src="../rsschool-cv/img/mortarboard.svg" alt="education">
                 Education
             </h2>
             <hr class="line">
@@ -202,28 +218,29 @@
                 <p>Complete html(basics), css(basics) and JavaScript(basics) courses on Hexlet.</p>
             </div>
         </section>
-        <section>
+        <section class="eng">
             <h2 class="cv-h2">
-                <img src="/img/eng.svg" alt="english">
+                <img src="../rsschool-cv/img/eng.svg" alt="english">
                 English</h2>
             <hr class="line">
             <p><strong>B1. Intermediate</strong></p>
-            <p>Everyday practice on <a href="https://lingualeo.com/en">Lingualeo</a></p>
+            <p>Everyday practice on <a href="https://lingualeo.com/en" style="color: blue;" target="blank">Lingualeo</a></p>
             
         </section>
         </main> 
         <footer>
             <div class="container-footer">
                 <a href="https://github.com/Mikhail1990-BY">
-                    <img src="/img/github-1.svg" width='31' alt="github">
+                    <img src="../rsschool-cv/img/github-1.svg" width='31' alt="github">
                 </a>
                 <a href="https://rs.school/js/">
-                    <img src="/img/rs_school_js.svg" width='65' alt="rsschool">
+                    <img src="../rsschool-cv/img/rs_school_js.svg" width='65' alt="rsschool">
                 </a>
                 <span class="year">2021</span>
             </div>
         </footer>     
     </div>
+    <script src="burger.js"></script>
 </body>
 </html>
 
